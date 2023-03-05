@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riski Ilyas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/Kee%20Coding%20Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="main-content">
+<header class="container header active" id="home">
+    <div class="header-content">
+        <div class="left-header">
+            <div class="h-shape"></div>
+            <div class="image">
+                <img src="/assets/me.jpg" alt="">
+            </div>
+        </div>
+        <div class="right-header">
+            <h1 class="name">
+                Hi, I'm <span>Riski Ilyas.</span>
+                A Mobile Developer.
+            </h1>
+            <p>
+                I'm am IT Student who specialize on Mobile Development, I love to create beautiful and functional apps.
+                I have spent 2+ Years on Mobile Development realm since 2021 and continue to specialize my skill to be a professional mobile developer
+            </p>
+            <div class="contact-icons">
+                <div class="contact-icon">
+                    <a href="https://www.riskiilyas.com" target="_blank" style="margin: 1rem">
+                        <i class="fab fa-chrome"></i>
+                    </a>
+                    <a href="https://instagram.com/riski.ilyas03" target="_blank" style="margin: 1rem">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/riski-ilyas/" target="_blank" style="margin: 1rem">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/riskiilyas" target="_blank" style="margin: 1rem">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="controls">
+    <div class="control" data-id="home" >
+        <i class="fas fa-home"></i>
+    </div>
+    <div class="control active-btn" data-id="profile">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="control" data-id="hometown">
+        <i class="fas fa-city"></i>
+    </div>
+    <div class="control" data-id="food">
+        <i class="fas fa-hamburger"></i>
+    </div>
+    <div class="control" data-id="tourist">
+        <i class="fas fa-skiing"></i>
+    </div>
+</div>
+<script>
+    (function () {
+        [...document.querySelectorAll(".control")].forEach(button => {
+            button.addEventListener("click", function() {
+                if (!button.classList.contains('active-btn'))
+                    if (button.dataset.id === 'home') {
+                        window.location.href = '..'
+                    } else {
+                        window.location.href = '../'+button.dataset.id;
+                    }
+            })
+        });
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riski Ilyas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/Kee%20Coding%20Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="main-content">
+<section class="container active" id="portfolio" style="margin-top: 2rem;">
+    <div class="main-title">
+        <h2>Popular <span>Foods</span><span class="bg-text">Foods</span></h2>
+    </div>
+    <p class="port-text">
+        Some of the most popular foods in Sumatera Utara
+    </p>
+    <div class="portfolios">
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/bikaambon.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Bika Ambon</h3>
+                <p style="text-align: center">Bika ambon memiliki warna kekuning-kuningan dan memiliki tekstur menyerupai sarang lebah. Bika ambon memiliki cita rasa manis.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/anyangpakis.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Anyang Pakis</h3>
+                <p style="text-align: center">Sesuai namanya, bahan utama anyang pakis merupakan pakis atau tanaman paku yang diberi bumbu berupa kelapa hasil penyaringan yang kemudian disangrai.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/lemang.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Lemang</h3>
+                <p style="text-align: center">Biasanya lemang disantap dengan rendang atau fermentasi beras ketan hitam. Disebut rires karena makanan ini dimasak di dalam batang bambu dengan api terbuka.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/karimedan.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Kari Medan</h3>
+                <p style="text-align: center">Kari Medan memiliki kuah kental berwarna kuning yang berisi sayur, daging dan bihun.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/miegomak.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Mie Gomak</h3>
+                <p style="text-align: center">Mie Gomak merupakan makanan khas Sumatera Utara, tepatnya berasal dari tanah Batak Toba dan juga menjadi makanan khas Sibolga dan Tapanuli.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="image">
+                <img src="/assets/arsik.webp" alt="">
+            </div>
+            <div class="hover-items">
+                <h3>Arsik</h3>
+                <p style="text-align: center">Arsik biasanya dibuat dengan bahan dasar ikan mas, namun juga bisa menggunakan jenis ikan lainnya seperti ikan kakap dan ikan kembung.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="controls">
+    <div class="control" data-id="home" >
+        <i class="fas fa-home"></i>
+    </div>
+    <div class="control" data-id="profile">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="control" data-id="hometown">
+        <i class="fas fa-city"></i>
+    </div>
+    <div class="control active-btn" data-id="food">
+        <i class="fas fa-hamburger"></i>
+    </div>
+    <div class="control" data-id="tourist">
+        <i class="fas fa-skiing"></i>
+    </div>
+</div>
+<script>
+    (function () {
+        [...document.querySelectorAll(".control")].forEach(button => {
+            button.addEventListener("click", function() {
+                if (!button.classList.contains('active-btn'))
+                    if (button.dataset.id === 'home') {
+                        window.location.href = '..'
+                    } else {
+                        window.location.href = '../'+button.dataset.id;
+                    }
+            })
+        });
+    })();
+</script>
+</body>
+</html>
